@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: customer-registration-with-docker
+  datasource:
+    url: jdbc:mysql://localhost:3306/customerdb?enabledTLSProtocols=TLSv1.2
+    username: root
+    password: PASSWORD
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+      boot:
+        allow_jdbc_metadata_access: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8089
+
